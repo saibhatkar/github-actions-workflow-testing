@@ -1,0 +1,14 @@
+name: PROD Pipeline
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  prod_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run PROD pipeline
+        run: echo "PRODUCTION environment triggered!"
