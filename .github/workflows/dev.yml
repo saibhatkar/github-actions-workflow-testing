@@ -1,0 +1,14 @@
+name: DEV Pipeline
+
+on:
+  push:
+    branches: ["dev"]
+
+jobs:
+  dev_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run DEV pipeline
+        run: echo "DEV environment triggered!"
